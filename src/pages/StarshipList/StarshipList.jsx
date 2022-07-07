@@ -12,7 +12,6 @@ const StarshipList = () => {
       setStarships(starshipData.results)
     }
     fetchStarshipList()
-    console.log(starships)
   }, [])
 
   return (
@@ -22,7 +21,7 @@ const StarshipList = () => {
       <>
         <div className="starship-container">
           {starships.map(starship =>
-            <Link key={starship.index} state={{ starship }} to='/starship'>
+            <Link key={starship.name} state={{ starship }} to='/starship'>
               <div className="starship-div">
                 {starship.name}
               </div>
