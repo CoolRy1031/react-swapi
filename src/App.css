@@ -1,38 +1,104 @@
-.App {
+:root {
+  --fg-color: rgb(240, 240, 240);
+  --bg-color: rgb(47, 79, 79);
+  --basic-border-radius: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+body {
+  /* Use a system font, if none are available use an available sans-sarif font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100vw;
+}
+
+.starship-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.starship-link {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--basic-border-radius);
+  display: flex;
+  font-size: 2rem;
+  color: rgb(232, 236, 236);
+  text-decoration: none;
+  background-color: var(--bg-color);
+  min-width: 15vw;
+  min-height: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  padding: 20px;
+}
+
+.starshipdetails-container {
+  margin: 20vh auto;
+  padding: 10px 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-size: 1.3rem;
+  flex-direction: column;
+  width: 40vw;
+  height: 10rem;
+  border-radius: var(--basic-border-radius);
+}
+
+.starshipdetails-container > div {
+  margin: 5px 0;
+}
+
+.starshipdetails-container > div > a {
+  color: var(--fg-color);
+  text-transform: uppercase;
+}
+
+.starshipdetails-container > div > span:nth-child(1) {
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+
+h1{
+  text-align: center;
+  background-color: rgb(113, 172, 11);
+}
+
+h3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pilot-div{
+  text-align: center;
+  color: rgb(113, 172, 11) ;
 }
